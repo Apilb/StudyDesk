@@ -14,14 +14,13 @@
   --txt:#d8e0f0;--sub:#8892a8;--bdr:#1c1f38;--r:12px;
 }
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
-/* ── LAYOUT ── */
 .wrap{max-width:860px;margin:0 auto;padding:28px 20px 100px}
-/* ── TOPBAR ── */
+/* TOPBAR */
 .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:22px;border-bottom:1px solid var(--bdr);gap:12px;flex-wrap:wrap}
 .logo{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.5px}
 .logo em{background:linear-gradient(110deg,var(--acc),var(--acc2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:normal}
 .top-btns{display:flex;gap:8px;flex-wrap:wrap}
-/* ── BUTTONS ── */
+/* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:5px;padding:8px 15px;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .18s;white-space:nowrap}
 .btn-ghost{background:var(--s2);color:var(--txt);border:1px solid var(--bdr)}
 .btn-ghost:hover{border-color:var(--acc);color:var(--acc)}
@@ -29,25 +28,27 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .btn-pri:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .btn-red{background:rgba(241,107,107,.1);color:var(--red);border:1px solid rgba(241,107,107,.2)}
 .btn-red:hover{background:rgba(241,107,107,.2)}
+.btn-green{background:rgba(31,212,160,.1);color:var(--green);border:1px solid rgba(31,212,160,.2)}
+.btn-green:hover{background:rgba(31,212,160,.2)}
 .btn-sm{padding:5px 11px;font-size:.75rem}
 .btn-xs{padding:3px 9px;font-size:.72rem;border-radius:6px}
-/* ── SESSIONS ── */
+/* SESSIONS */
 .sec-lbl{font-family:'Syne',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:2.5px;color:var(--sub);text-transform:uppercase;margin-bottom:10px}
 .sess-row{margin-bottom:28px}
-.sess-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:0}
+.sess-pills{display:flex;gap:8px;flex-wrap:wrap}
 .pill{display:flex;align-items:center;gap:7px;padding:7px 15px;border-radius:30px;border:1px solid var(--bdr);background:var(--s1);cursor:pointer;transition:all .18s;font-size:.82rem;font-weight:500;color:var(--sub)}
 .pill:hover{border-color:var(--acc);color:var(--txt)}
 .pill.on{background:linear-gradient(135deg,rgba(79,142,247,.15),rgba(124,92,252,.15));border-color:var(--acc);color:var(--txt)}
 .pill-x{font-size:.62rem;opacity:0;transition:opacity .15s;color:var(--red);padding:1px 4px;border-radius:3px;line-height:1}
 .pill:hover .pill-x{opacity:1}
-/* ── STATS ── */
+/* STATS */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:20px}
 .sbox{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);padding:15px 16px;overflow:hidden;position:relative}
 .sbox::before{content:'';position:absolute;top:-20px;right:-16px;width:70px;height:70px;border-radius:50%;background:currentColor;opacity:.05;filter:blur(16px)}
 .sbox .num{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800}
 .sbox .lbl{font-size:.68rem;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
 .sbox.c1 .num{color:#a78bfa}.sbox.c2 .num{color:var(--green)}.sbox.c3 .num{color:var(--acc)}.sbox.c4 .num{color:var(--acc3)}
-/* ── PROGRESS ── */
+/* PROGRESS */
 .prog-card{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);padding:16px 20px;margin-bottom:24px}
 .prog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 .prog-title{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:1.5px;color:var(--sub);text-transform:uppercase}
@@ -61,13 +62,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .tf1{background:linear-gradient(90deg,var(--acc),var(--acc2))}
 .tf2{background:linear-gradient(90deg,var(--acc3),var(--acc2))}
 .tpct{width:34px;text-align:right;font-weight:600;color:var(--txt);font-size:.72rem}
-/* ── SUBJECTS HEADER ── */
+/* SUBJECTS HEADER */
 .subj-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
 .subj-hdr .sec-lbl{margin-bottom:0}
 .filters{display:flex;gap:5px}
 .fpill{padding:4px 12px;border-radius:20px;border:1px solid var(--bdr);background:transparent;color:var(--sub);cursor:pointer;font-size:.74rem;font-family:'DM Sans',sans-serif;transition:all .15s}
 .fpill.on{background:var(--acc);color:#fff;border-color:var(--acc)}
-/* ── SUBJECT CARD ── */
+/* SUBJECT CARD */
 .slist{display:flex;flex-direction:column;gap:10px}
 .sc{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
 .sc:hover{border-color:rgba(79,142,247,.3)}
@@ -84,16 +85,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .tag-done{background:rgba(31,212,160,.1);color:var(--green)}
 .chev{color:var(--sub);font-size:.62rem;transition:transform .2s}
 .sc.open .chev{transform:rotate(180deg)}
-/* ── SUBJECT BODY ── */
+/* SUBJECT BODY */
 .sc-body{display:none;padding:0 14px 14px;border-top:1px solid var(--bdr)}
 .sc.open .sc-body{display:block}
-/* ── TASK ── */
-.task{display:flex;align-items:center;gap:8px;padding:8px 9px;border-radius:8px;cursor:pointer;transition:background .14s}
+/* TASK */
+.task{display:flex;align-items:center;gap:8px;padding:8px 9px;border-radius:8px;transition:background .14s;position:relative}
 .task:hover{background:var(--s2)}
+.task-main{display:flex;align-items:center;gap:8px;flex:1;min-width:0;cursor:pointer}
 .task.done .ttxt{text-decoration:line-through;color:var(--sub)}
 .chk{width:17px;height:17px;border:1.5px solid var(--bdr);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.58rem;flex-shrink:0;transition:all .2s}
 .task.done .chk{background:var(--green);border-color:var(--green);color:#07080f}
-.ttxt{flex:1;font-size:.855rem;line-height:1.4}
+.ttxt{flex:1;font-size:.855rem;line-height:1.4;min-width:0}
 .dbadge{font-size:.61rem;padding:2px 6px;border-radius:6px;font-weight:700;flex-shrink:0}
 .db1{background:rgba(31,212,160,.14);color:#1fd4a0}
 .db2{background:rgba(79,142,247,.14);color:#4f8ef7}
@@ -101,22 +103,51 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .db4{background:rgba(247,95,142,.14);color:#f75f8e}
 .ptag{font-size:.62rem;color:var(--sub);flex-shrink:0;font-weight:600}
 .task.done .ptag{color:var(--green)}
-.tdel{opacity:0;background:none;border:none;color:var(--sub);cursor:pointer;font-size:.78rem;padding:2px 5px;border-radius:4px;transition:opacity .14s,color .14s;flex-shrink:0}
+.task-actions{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.tdel{opacity:0;background:none;border:none;color:var(--sub);cursor:pointer;font-size:.78rem;padding:2px 5px;border-radius:4px;transition:opacity .14s,color .14s}
 .task:hover .tdel{opacity:1}
 .tdel:hover{color:var(--red)}
-/* ── ADD ROW ── */
+/* TIMER BADGE on task row */
+.t-timer-badge{display:inline-flex;align-items:center;gap:4px;font-size:.65rem;padding:2px 7px;border-radius:10px;font-weight:700;flex-shrink:0;border:1px solid var(--bdr);color:var(--sub);background:var(--s2);cursor:pointer;transition:all .15s}
+.t-timer-badge:hover{border-color:var(--acc);color:var(--acc)}
+.t-timer-badge.running{border-color:var(--green);color:var(--green);background:rgba(31,212,160,.08);animation:pulseBdr 1.4s ease-in-out infinite}
+.t-timer-badge.break{border-color:var(--acc);color:var(--acc);background:rgba(79,142,247,.08)}
+@keyframes pulseBdr{0%,100%{box-shadow:0 0 0 0 rgba(31,212,160,.3)}50%{box-shadow:0 0 0 4px rgba(31,212,160,0)}}
+/* ADD ROW */
 .add-row{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .add-row input{flex:1;min-width:130px;padding:7px 11px;background:var(--s2);border:1px solid var(--bdr);border-radius:7px;color:var(--txt);font-size:.81rem;font-family:'DM Sans',sans-serif;outline:none}
 .add-row input:focus{border-color:var(--acc)}
 .add-row input::placeholder{color:var(--sub)}
 .add-row select{padding:7px 8px;background:var(--s2);border:1px solid var(--bdr);border-radius:7px;color:var(--txt);font-size:.76rem;font-family:'DM Sans',sans-serif;outline:none;cursor:pointer}
 .add-row select:focus{border-color:var(--acc)}
-/* ── NOTES ── */
+/* NOTES */
 .note-wrap{margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr)}
 .note-wrap textarea{width:100%;padding:8px 11px;background:var(--s2);border:1px solid var(--bdr);border-radius:8px;color:var(--txt);font-size:.81rem;resize:vertical;outline:none;min-height:54px;font-family:'DM Sans',sans-serif;line-height:1.5}
 .note-wrap textarea:focus{border-color:var(--acc)}
 .note-wrap textarea::placeholder{color:var(--sub)}
-/* ── MODALS ── */
+
+/* ══ QUICK NOTES PANEL ══ */
+.qnotes-panel{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);padding:16px 18px;margin-bottom:24px}
+.qnotes-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;cursor:pointer;user-select:none}
+.qnotes-title{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:1.5px;color:var(--sub);text-transform:uppercase;display:flex;align-items:center;gap:7px}
+.qnotes-body{display:none}
+.qnotes-panel.open .qnotes-body{display:block}
+.qnotes-list{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.qn-item{display:flex;align-items:flex-start;gap:8px;background:var(--s2);border:1px solid var(--bdr);border-radius:8px;padding:9px 11px;font-size:.8rem;line-height:1.5;transition:border-color .15s}
+.qn-item:hover{border-color:rgba(79,142,247,.3)}
+.qn-txt{flex:1;word-break:break-word;white-space:pre-wrap}
+.qn-txt a{color:var(--acc);text-decoration:none}
+.qn-txt a:hover{text-decoration:underline}
+.qn-del{background:none;border:none;color:var(--sub);cursor:pointer;font-size:.75rem;padding:1px 5px;border-radius:4px;opacity:0;transition:opacity .14s,color .14s;flex-shrink:0;margin-top:1px}
+.qn-item:hover .qn-del{opacity:1}
+.qn-del:hover{color:var(--red)}
+.qn-add-row{display:flex;gap:7px}
+.qn-add-row input{flex:1;padding:8px 11px;background:var(--s2);border:1px solid var(--bdr);border-radius:8px;color:var(--txt);font-size:.81rem;font-family:'DM Sans',sans-serif;outline:none}
+.qn-add-row input:focus{border-color:var(--acc)}
+.qn-add-row input::placeholder{color:var(--sub)}
+.qn-empty{color:var(--sub);font-size:.78rem;text-align:center;padding:10px 0}
+
+/* ══ MODALS ══ */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
 .ov.hid{display:none}
 .modal{background:var(--s2);border:1px solid var(--bdr);border-radius:16px;padding:24px;width:100%;max-width:440px;position:relative;max-height:90vh;overflow-y:auto}
@@ -129,12 +160,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .fg input,.fg select,.fg textarea{width:100%;padding:9px 12px;background:var(--bg);border:1px solid var(--bdr);border-radius:8px;color:var(--txt);font-size:.85rem;font-family:'DM Sans',sans-serif;outline:none}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--acc)}
 .mactions{display:flex;gap:8px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
-/* ── ICON PICKER ── */
+/* ICON PICKER */
 .ipick{display:flex;flex-wrap:wrap;gap:6px}
 .iopt{width:35px;height:35px;background:var(--bg);border:1.5px solid var(--bdr);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;transition:all .14s}
 .iopt:hover{border-color:var(--sub)}
 .iopt.on{border-color:var(--acc);background:rgba(79,142,247,.13)}
-/* ── IO MODAL ── */
+/* IO MODAL */
 .io-tabs{display:flex;gap:5px;margin-bottom:14px}
 .iotab{padding:5px 13px;border-radius:7px;border:1px solid var(--bdr);background:transparent;color:var(--sub);cursor:pointer;font-size:.76rem;font-family:'DM Sans',sans-serif;transition:all .14s}
 .iotab.on{background:var(--s3);color:var(--txt);border-color:var(--sub)}
@@ -146,17 +177,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .dlgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
 .dlrow{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--bdr);border-radius:8px;padding:8px 10px}
 .dlpts{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-left:auto}
-/* ── EMPTY ── */
+/* EMPTY */
 .empty{text-align:center;padding:44px 20px;color:var(--sub)}
 .empty .e-icon{font-size:2.5rem;margin-bottom:10px}
 .empty p{font-size:.87rem;line-height:1.6}
-/* ── TOAST ── */
+/* TOAST */
 .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(14px);padding:9px 20px;border-radius:30px;font-weight:600;font-size:.8rem;opacity:0;transition:all .28s;z-index:999;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .toast.g{background:var(--green);color:#07080f;box-shadow:0 4px 18px rgba(31,212,160,.3)}
 .toast.b{background:var(--acc);color:#fff;box-shadow:0 4px 18px rgba(79,142,247,.3)}
 .toast.r{background:var(--red);color:#fff;box-shadow:0 4px 18px rgba(241,107,107,.3)}
-/* ── SCROLLBAR ── */
+
+/* ══ POMODORO MODAL ══ */
+.pomo-modal{max-width:380px}
+.pomo-task-name{font-size:.82rem;color:var(--sub);margin-bottom:18px;padding:8px 12px;background:var(--bg);border-radius:8px;border:1px solid var(--bdr);line-height:1.5}
+.pomo-display{text-align:center;margin-bottom:20px}
+.pomo-phase{font-family:'Syne',sans-serif;font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--sub);margin-bottom:8px}
+.pomo-phase.work{color:var(--acc3)}
+.pomo-phase.brk{color:var(--acc)}
+.pomo-clock{font-family:'Syne',sans-serif;font-size:3.8rem;font-weight:800;letter-spacing:-2px;line-height:1;transition:color .3s}
+.pomo-clock.work{color:var(--acc3)}
+.pomo-clock.brk{color:var(--acc)}
+.pomo-ring-wrap{position:relative;width:140px;height:140px;margin:0 auto 16px}
+.pomo-svg{width:140px;height:140px;transform:rotate(-90deg)}
+.pomo-ring-bg{fill:none;stroke:var(--bdr);stroke-width:6}
+.pomo-ring-fg{fill:none;stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset .8s linear,stroke .3s}
+.pomo-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pomo-sessions{font-size:.72rem;color:var(--sub);margin-bottom:16px;text-align:center}
+.pomo-sessions b{color:var(--txt)}
+.pomo-settings{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.pomo-settings.three{grid-template-columns:1fr 1fr 1fr}
+.ps-box{background:var(--bg);border:1px solid var(--bdr);border-radius:8px;padding:8px 10px}
+.ps-box label{display:block;font-size:.62rem;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.ps-box input{width:100%;background:transparent;border:none;outline:none;color:var(--txt);font-family:'Syne',sans-serif;font-size:1rem;font-weight:700}
+.pomo-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.pomo-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--bdr);transition:background .2s}
+.pomo-dot.done{background:var(--acc3)}
+.pomo-dots{display:flex;gap:5px;justify-content:center;margin-bottom:14px}
+
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:6px}
@@ -172,10 +230,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
   <div class="modal">
     <button class="mclose" onclick="cm('m-sess')">✕</button>
     <h3>New Session</h3>
-    <div class="fg">
-      <label>Session Name</label>
-      <input type="text" id="sess-name-inp" placeholder="e.g. Semester 2, Finals Week…">
-    </div>
+    <div class="fg"><label>Session Name</label><input type="text" id="sess-name-inp" placeholder="e.g. Semester 2, Finals Week…"></div>
     <div class="mactions">
       <button class="btn btn-ghost" onclick="cm('m-sess')">Cancel</button>
       <button class="btn btn-pri" onclick="addSession()">Create</button>
@@ -188,14 +243,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
   <div class="modal">
     <button class="mclose" onclick="cm('m-subj')">✕</button>
     <h3>New Subject</h3>
-    <div class="fg">
-      <label>Name</label>
-      <input type="text" id="subj-name-inp" placeholder="e.g. Organic Chemistry">
-    </div>
-    <div class="fg">
-      <label>Icon</label>
-      <div class="ipick" id="ipick"></div>
-    </div>
+    <div class="fg"><label>Name</label><input type="text" id="subj-name-inp" placeholder="e.g. Organic Chemistry"></div>
+    <div class="fg"><label>Icon</label><div class="ipick" id="ipick"></div></div>
     <div class="mactions">
       <button class="btn btn-ghost" onclick="cm('m-subj')">Cancel</button>
       <button class="btn btn-pri" onclick="addSubject()">Add Subject</button>
@@ -213,11 +262,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
       <button class="iotab" id="iot-load" onclick="ioTab('load')">📂 Load JSON</button>
       <button class="iotab" id="iot-fmt" onclick="ioTab('fmt')">📄 Format</button>
     </div>
-
-    <!-- SAVE -->
     <div id="io-save">
-      <div class="fg">
-        <label>What to export</label>
+      <div class="fg"><label>What to export</label>
         <select id="exp-scope" onchange="genExport()">
           <option value="all">All Sessions</option>
           <option value="cur">Current Session Only</option>
@@ -229,24 +275,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
         <button class="btn btn-pri" onclick="dlJSON()">⬇ Download .json</button>
       </div>
     </div>
-
-    <!-- LOAD -->
     <div id="io-load" style="display:none">
-      <div class="fg">
-        <label>Paste JSON or pick a file</label>
-        <textarea class="codebox" id="imp-in" placeholder="Paste your StudyDesk JSON here…" style="min-height:160px"></textarea>
-      </div>
-      <p class="hint">⚠ Sessions with matching IDs will be <b>replaced</b>. New sessions are added alongside existing ones. Your current auto-saved data is never lost until you click Import.</p>
+      <div class="fg"><label>Paste JSON or pick a file</label><textarea class="codebox" id="imp-in" placeholder="Paste your StudyDesk JSON here…" style="min-height:160px"></textarea></div>
+      <p class="hint">⚠ Sessions with matching IDs will be <b>replaced</b>. New sessions are added alongside existing ones.</p>
       <div class="mactions">
         <button class="btn btn-ghost" onclick="document.getElementById('file-pick').click()">📁 Pick File</button>
         <input type="file" id="file-pick" accept=".json" style="display:none" onchange="pickFile(event)">
         <button class="btn btn-pri" onclick="doImport()">⬆ Import</button>
       </div>
     </div>
-
-    <!-- FORMAT GUIDE -->
     <div id="io-fmt" style="display:none">
-      <p class="hint">StudyDesk saves plain <b>JSON</b>. You can open it in any text editor, change things, and re-import. Difficulty options: <b>easy · normal · hard · expert</b></p>
+      <p class="hint">StudyDesk saves plain <b>JSON</b>. Difficulty options: <b>easy · normal · hard · expert</b></p>
       <pre class="schema" id="schema-pre"></pre>
       <p class="hint" style="margin-top:12px">Point values per difficulty:</p>
       <div class="dlgrid" id="dl-grid"></div>
@@ -254,10 +293,50 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
   </div>
 </div>
 
+<!-- ══ MODAL: POMODORO TIMER ══ -->
+<div class="ov hid" id="m-pomo">
+  <div class="modal pomo-modal">
+    <button class="mclose" onclick="stopPomo();cm('m-pomo')">✕</button>
+    <h3>🍅 Pomodoro Timer</h3>
+    <div class="pomo-task-name" id="pomo-task-label">Task name</div>
+
+    <!-- ring -->
+    <div class="pomo-ring-wrap">
+      <svg class="pomo-svg" viewBox="0 0 140 140">
+        <circle class="pomo-ring-bg" cx="70" cy="70" r="62"/>
+        <circle class="pomo-ring-fg" id="pomo-ring" cx="70" cy="70" r="62" stroke="#f75f8e"
+          stroke-dasharray="389.6" stroke-dashoffset="0"/>
+      </svg>
+      <div class="pomo-inner">
+        <div class="pomo-phase" id="pomo-phase">Work</div>
+        <div class="pomo-clock" id="pomo-clock">25:00</div>
+      </div>
+    </div>
+
+    <div class="pomo-dots" id="pomo-dots"></div>
+    <div class="pomo-sessions" id="pomo-sess-info">Session <b>1</b> of 4 · Long break after <b>4</b></div>
+
+    <!-- settings -->
+    <div class="pomo-settings three" id="pomo-cfg">
+      <div class="ps-box"><label>Work (min)</label><input type="number" id="pc-work" value="25" min="1" max="90" onchange="resetPomo()"></div>
+      <div class="ps-box"><label>Short break</label><input type="number" id="pc-short" value="5" min="1" max="30" onchange="resetPomo()"></div>
+      <div class="ps-box"><label>Long break</label><input type="number" id="pc-long" value="15" min="5" max="60" onchange="resetPomo()"></div>
+    </div>
+    <div class="pomo-settings" style="grid-template-columns:1fr 1fr;margin-top:-2px">
+      <div class="ps-box"><label>Sessions before long</label><input type="number" id="pc-sessions" value="4" min="1" max="10" onchange="resetPomo()"></div>
+      <div class="ps-box"><label>Completed today</label><input type="number" id="pc-done" value="0" min="0" readonly style="color:var(--green)"></div>
+    </div>
+
+    <div class="pomo-btns">
+      <button class="btn btn-ghost btn-sm" id="pomo-reset-btn" onclick="resetPomo()">↺ Reset</button>
+      <button class="btn btn-pri" id="pomo-start-btn" onclick="togglePomo()">▶ Start</button>
+      <button class="btn btn-ghost btn-sm" onclick="skipPhase()">⏭ Skip</button>
+    </div>
+  </div>
+</div>
+
 <!-- ══ APP ══ -->
 <div class="wrap">
-
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="logo">Study<em>Desk</em></div>
     <div class="top-btns">
@@ -266,13 +345,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
     </div>
   </div>
 
-  <!-- SESSIONS -->
   <div class="sess-row">
     <div class="sec-lbl">Sessions</div>
     <div class="sess-pills" id="sess-pills"></div>
   </div>
 
-  <!-- STATS -->
   <div class="stats">
     <div class="sbox c1"><div class="num" id="s-tot">0</div><div class="lbl">Total Tasks</div></div>
     <div class="sbox c2"><div class="num" id="s-dn">0</div><div class="lbl">Completed</div></div>
@@ -280,30 +357,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
     <div class="sbox c4"><div class="num" id="s-tp">0</div><div class="lbl">Total Pts</div></div>
   </div>
 
-  <!-- PROGRESS -->
   <div class="prog-card">
     <div class="prog-head">
       <span class="prog-title">Progress</span>
-      <div class="prog-pcts">
-        <span>Tasks <b id="pn-t">0%</b></span>
-        <span>Points <b id="pn-p">0%</b></span>
-      </div>
+      <div class="prog-pcts"><span>Tasks <b id="pn-t">0%</b></span><span>Points <b id="pn-p">0%</b></span></div>
     </div>
     <div class="tracks">
-      <div class="trow">
-        <span class="tlbl">By count</span>
-        <div class="track"><div class="tfill tf1" id="tf-t" style="width:0%"></div></div>
-        <span class="tpct" id="tp-t">0%</span>
+      <div class="trow"><span class="tlbl">By count</span><div class="track"><div class="tfill tf1" id="tf-t" style="width:0%"></div></div><span class="tpct" id="tp-t">0%</span></div>
+      <div class="trow"><span class="tlbl">By weight ✦</span><div class="track"><div class="tfill tf2" id="tf-p" style="width:0%"></div></div><span class="tpct" id="tp-p">0%</span></div>
+    </div>
+  </div>
+
+  <!-- ══ QUICK NOTES PANEL ══ -->
+  <div class="qnotes-panel open" id="qnotes-panel">
+    <div class="qnotes-head" onclick="toggleQNotes()">
+      <div class="qnotes-title">
+        <span>📌</span><span>Quick Notes &amp; Links</span>
+        <span id="qn-count" style="font-size:.68rem;background:var(--s3);padding:2px 7px;border-radius:10px;font-weight:700;color:var(--txt)">0</span>
       </div>
-      <div class="trow">
-        <span class="tlbl">By weight ✦</span>
-        <div class="track"><div class="tfill tf2" id="tf-p" style="width:0%"></div></div>
-        <span class="tpct" id="tp-p">0%</span>
+      <span class="chev" id="qn-chev">▼</span>
+    </div>
+    <div class="qnotes-body" id="qnotes-body">
+      <div class="qnotes-list" id="qnotes-list"></div>
+      <div class="qn-add-row">
+        <input type="text" id="qn-inp" placeholder="Paste a link, type a note, or anything… (Enter to add)">
+        <button class="btn btn-pri btn-sm" onclick="addQNote()">＋ Add</button>
       </div>
     </div>
   </div>
 
-  <!-- SUBJECTS HEADER -->
   <div class="subj-hdr">
     <div class="sec-lbl">Subjects</div>
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
@@ -316,9 +398,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
     </div>
   </div>
 
-  <!-- SUBJECTS LIST -->
   <div class="slist" id="slist"></div>
-
 </div>
 
 <script>
@@ -364,7 +444,8 @@ var SEED={
       ]}
     ]
   }],
-  active:'s1'
+  active:'s1',
+  qnotes:[]
 };
 
 // ══════════════════════════════════════════════
@@ -378,14 +459,11 @@ function load(){
     var r=localStorage.getItem(LS_KEY);
     db = r ? JSON.parse(r) : JSON.parse(JSON.stringify(SEED));
   } catch(e){ db=JSON.parse(JSON.stringify(SEED)); }
-  // migrate old priority field
+  if(!db.qnotes) db.qnotes=[];
   db.sessions.forEach(function(sess){
     (sess.subjects||[]).forEach(function(subj){
       (subj.tasks||[]).forEach(function(t){
-        if(!t.diff){
-          t.diff = t.priority==='high'?'hard' : t.priority==='low'?'easy' : 'normal';
-          delete t.priority;
-        }
+        if(!t.diff){ t.diff=t.priority==='high'?'hard':t.priority==='low'?'easy':'normal'; delete t.priority; }
       });
     });
   });
@@ -398,7 +476,7 @@ function tpts(t){ return (D[t.diff]||D.normal).pts; }
 function calcStats(sess){
   var tasks=[];
   (sess.subjects||[]).forEach(function(s){ tasks=tasks.concat(s.tasks); });
-  var tot=tasks.length, dn=0, ep=0, tp=0;
+  var tot=tasks.length,dn=0,ep=0,tp=0;
   tasks.forEach(function(t){ tp+=tpts(t); if(t.done){ dn++; ep+=tpts(t); } });
   return {tot:tot,dn:dn,ep:ep,tp:tp};
 }
@@ -418,13 +496,10 @@ function renderSessions(){
 function setSess(id){ db.active=id; save(); render(); }
 function addSession(){
   var inp=document.getElementById('sess-name-inp');
-  var name=inp.value.trim();
-  if(!name) return;
+  var name=inp.value.trim(); if(!name) return;
   var id=uid();
   db.sessions.push({id:id,name:name,subjects:[]});
-  db.active=id;
-  inp.value='';
-  cm('m-sess'); save(); render();
+  db.active=id; inp.value=''; cm('m-sess'); save(); render();
 }
 function delSess(id){
   if(!confirm('Delete this session and all its data?')) return;
@@ -453,8 +528,7 @@ function openAddSubj(){
   om('m-subj');
 }
 function addSubject(){
-  var name=document.getElementById('subj-name-inp').value.trim();
-  if(!name) return;
+  var name=document.getElementById('subj-name-inp').value.trim(); if(!name) return;
   activeSess().subjects.push({id:uid(),icon:picon,name:name,note:'',open:true,tasks:[]});
   cm('m-subj'); save(); render();
 }
@@ -487,17 +561,61 @@ function delTask(sid,tid){
 function addTask(sid){
   var inp=document.getElementById('ai-'+sid);
   var dsel=document.getElementById('ad-'+sid);
-  var text=inp.value.trim();
-  if(!text) return;
+  var text=inp.value.trim(); if(!text) return;
   var subj=activeSess().subjects.find(function(s){ return s.id===sid; });
   subj.tasks.push({id:uid(),text:text,done:false,diff:dsel.value});
-  subj.open=true;
-  inp.value=''; save(); render();
+  subj.open=true; inp.value=''; save(); render();
 }
 function updNote(sid,v){
   activeSess().subjects.find(function(s){ return s.id===sid; }).note=v;
   save();
 }
+
+// ══════════════════════════════════════════════
+//  QUICK NOTES
+// ══════════════════════════════════════════════
+var qNotesOpen=true;
+function toggleQNotes(){
+  qNotesOpen=!qNotesOpen;
+  var panel=document.getElementById('qnotes-panel');
+  var body=document.getElementById('qnotes-body');
+  var chev=document.getElementById('qn-chev');
+  panel.classList.toggle('open',qNotesOpen);
+  body.style.display=qNotesOpen?'block':'none';
+  chev.style.transform=qNotesOpen?'':'rotate(-90deg)';
+}
+function isURL(s){
+  try{ var u=new URL(s); return u.protocol==='http:'||u.protocol==='https:'; } catch(e){ return false; }
+}
+function renderQNotes(){
+  var list=db.qnotes||[];
+  var el=document.getElementById('qnotes-list');
+  document.getElementById('qn-count').textContent=list.length;
+  if(!list.length){ el.innerHTML='<div class="qn-empty">No notes yet. Paste links or jot down anything!</div>'; return; }
+  el.innerHTML=list.map(function(n,i){
+    var display=isURL(n.text)
+      ? '<a href="'+esc(n.text)+'" target="_blank" rel="noopener">'+esc(n.text)+'</a>'
+      : esc(n.text);
+    return '<div class="qn-item">'
+      +'<span class="qn-txt">'+display+'</span>'
+      +'<button class="qn-del" onclick="delQNote('+i+')" title="Delete">✕</button>'
+      +'</div>';
+  }).join('');
+}
+function addQNote(){
+  var inp=document.getElementById('qn-inp');
+  var text=inp.value.trim(); if(!text) return;
+  if(!db.qnotes) db.qnotes=[];
+  db.qnotes.push({id:uid(),text:text});
+  inp.value=''; save(); renderQNotes();
+}
+function delQNote(i){
+  db.qnotes.splice(i,1); save(); renderQNotes();
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var inp=document.getElementById('qn-inp');
+  if(inp) inp.addEventListener('keydown',function(e){ if(e.key==='Enter') addQNote(); });
+});
 
 // ══════════════════════════════════════════════
 //  STATS + PROGRESS
@@ -525,8 +643,7 @@ function updateStats(){
 function setF(f,btn){
   flt=f;
   document.querySelectorAll('.fpill').forEach(function(b){ b.classList.remove('on'); });
-  btn.classList.add('on');
-  render();
+  btn.classList.add('on'); render();
 }
 function renderSubjects(){
   var el=document.getElementById('slist');
@@ -549,13 +666,25 @@ function renderSubjects(){
 
     var tasksHTML=s.tasks.map(function(t){
       var d=D[t.diff]||D.normal;
-      return '<div class="task'+(t.done?' done':'')+'" onclick="togTask(\''+s.id+'\',\''+t.id+'\')">'
-        +'<div class="chk">'+(t.done?'✓':'')+'</div>'
-        +'<span class="ttxt">'+esc(t.text)+'</span>'
-        +'<span class="dbadge '+d.cl+'">'+d.ic+' '+d.n+'</span>'
-        +'<span class="ptag">'+(t.done?'✦':'◇')+d.pts+'pt</span>'
-        +'<button class="tdel" onclick="event.stopPropagation();delTask(\''+s.id+'\',\''+t.id+'\')">✕</button>'
-        +'</div>';
+      // check if this task is currently in pomo
+      var isCurPomo=(pomoState.taskId===t.id);
+      var timerClass=isCurPomo?(pomoState.running?(pomoState.phase==='work'?'running':'break'):''):'';
+      var timerLabel=isCurPomo
+        ? (pomoState.running ? (pomoState.phase==='work'?'🍅 Running':'☕ Break') : '⏸ Paused')
+        : '🍅';
+      var timerTime=isCurPomo ? fmtTime(pomoState.remaining) : '';
+      return '<div class="task'+(t.done?' done':'')+'" id="task-row-'+t.id+'">'
+        +'<div class="task-main" onclick="togTask(\''+s.id+'\',\''+t.id+'\')">'
+          +'<div class="chk">'+(t.done?'✓':'')+'</div>'
+          +'<span class="ttxt">'+esc(t.text)+'</span>'
+          +'<span class="dbadge '+d.cl+'">'+d.ic+' '+d.n+'</span>'
+          +'<span class="ptag">'+(t.done?'✦':'◇')+d.pts+'pt</span>'
+        +'</div>'
+        +'<div class="task-actions">'
+          +'<span class="t-timer-badge '+timerClass+'" onclick="openPomo(\''+s.id+'\',\''+t.id+'\')" title="Open Pomodoro timer">'+timerLabel+(timerTime?' '+timerTime:'')+'</span>'
+          +'<button class="tdel" onclick="event.stopPropagation();delTask(\''+s.id+'\',\''+t.id+'\')">✕</button>'
+        +'</div>'
+      +'</div>';
     }).join('');
 
     var diffOpts=DK.map(function(k){ return '<option value="'+k+'"'+(k==='normal'?' selected':'')+'>'+(D[k].ic)+' '+(D[k].n)+' ('+D[k].pts+'pt)</option>'; }).join('');
@@ -595,30 +724,188 @@ function renderSubjects(){
 }
 
 // ══════════════════════════════════════════════
+//  POMODORO TIMER
+// ══════════════════════════════════════════════
+var pomoState={
+  taskId:null, subjId:null, taskText:'',
+  phase:'work', // 'work' | 'short' | 'long'
+  running:false,
+  remaining:25*60,
+  totalSecs:25*60,
+  sessCount:0, // completed work sessions
+  doneSessions:0,
+  _iv:null
+};
+var CIRC=2*Math.PI*62; // circumference
+
+function getCfg(){
+  return {
+    work: parseInt(document.getElementById('pc-work').value)||25,
+    short: parseInt(document.getElementById('pc-short').value)||5,
+    long: parseInt(document.getElementById('pc-long').value)||15,
+    sessions: parseInt(document.getElementById('pc-sessions').value)||4
+  };
+}
+function fmtTime(s){
+  var m=Math.floor(s/60); var sc=s%60;
+  return (m<10?'0':'')+m+':'+(sc<10?'0':'')+sc;
+}
+function updatePomoUI(){
+  var cfg=getCfg();
+  var ring=document.getElementById('pomo-ring');
+  var clock=document.getElementById('pomo-clock');
+  var phase=document.getElementById('pomo-phase');
+  var sessInfo=document.getElementById('pomo-sess-info');
+  var btn=document.getElementById('pomo-start-btn');
+  var cur=pomoState.sessCount%cfg.sessions+1;
+
+  // ring
+  var pct=pomoState.totalSecs>0?pomoState.remaining/pomoState.totalSecs:0;
+  ring.style.strokeDashoffset=CIRC*(1-pct);
+  clock.textContent=fmtTime(pomoState.remaining);
+
+  // phase coloring
+  var isWork=pomoState.phase==='work';
+  ring.style.stroke=isWork?'#f75f8e':'#4f8ef7';
+  clock.className='pomo-clock '+(isWork?'work':'brk');
+  phase.className='pomo-phase '+(isWork?'work':'brk');
+  phase.textContent=isWork?'Work 🍅':(pomoState.phase==='long'?'Long Break ☕':'Short Break ☕');
+
+  // sessions count
+  sessInfo.innerHTML='Completed: <b>'+pomoState.doneSessions+'</b> · Next long break after <b>'+cfg.sessions+'</b>';
+
+  // dots
+  var dots=document.getElementById('pomo-dots');
+  dots.innerHTML='';
+  for(var i=0;i<cfg.sessions;i++){
+    var d=document.createElement('span');
+    d.className='pomo-dot'+(i<pomoState.sessCount%cfg.sessions?' done':'');
+    dots.appendChild(d);
+  }
+
+  // button
+  btn.textContent=pomoState.running?'⏸ Pause':'▶ Start';
+  btn.className='btn btn-pri'+(pomoState.running?' btn-red':'');
+
+  // update badge in task list if visible
+  updateTaskBadge();
+
+  // title
+  if(pomoState.running){
+    document.title='['+fmtTime(pomoState.remaining)+'] '+(isWork?'Work':'Break')+' – StudyDesk';
+  } else {
+    document.title='StudyDesk';
+  }
+}
+function updateTaskBadge(){
+  if(!pomoState.taskId) return;
+  var badge=document.querySelector('[id="task-row-'+pomoState.taskId+'"] .t-timer-badge');
+  if(!badge) return;
+  var isWork=pomoState.phase==='work';
+  badge.className='t-timer-badge'+(pomoState.running?(isWork?' running':' break'):'');
+  badge.textContent=(pomoState.running?(isWork?'🍅 ':' ☕ '):'⏸ ')+fmtTime(pomoState.remaining);
+}
+function openPomo(sid,tid){
+  // if switching task, stop current
+  if(pomoState.taskId && pomoState.taskId!==tid && pomoState.running){
+    if(!confirm('Stop current timer and switch to this task?')) return;
+    stopPomo();
+  }
+  var subj=activeSess().subjects.find(function(s){ return s.id===sid; });
+  var task=subj&&subj.tasks.find(function(t){ return t.id===tid; });
+  if(!task) return;
+  if(pomoState.taskId!==tid){
+    pomoState.taskId=tid; pomoState.subjId=sid; pomoState.taskText=task.text;
+    resetPomo();
+  }
+  document.getElementById('pomo-task-label').textContent=task.text;
+  document.getElementById('pc-done').value=pomoState.doneSessions;
+  updatePomoUI();
+  om('m-pomo');
+}
+function togglePomo(){
+  if(pomoState.running){ pausePomo(); } else { startPomo(); }
+}
+function startPomo(){
+  if(!pomoState.taskId){ toast('No task selected','r'); return; }
+  if(pomoState.remaining<=0) resetPomo();
+  pomoState.running=true;
+  pomoState._iv=setInterval(function(){
+    pomoState.remaining--;
+    if(pomoState.remaining<=0){ phaseEnd(); return; }
+    updatePomoUI();
+  },1000);
+  updatePomoUI();
+}
+function pausePomo(){
+  pomoState.running=false;
+  clearInterval(pomoState._iv);
+  updatePomoUI();
+  updateTaskBadge();
+}
+function stopPomo(){
+  pausePomo();
+  document.title='StudyDesk';
+}
+function resetPomo(){
+  var cfg=getCfg();
+  pausePomo();
+  pomoState.phase='work';
+  pomoState.remaining=cfg.work*60;
+  pomoState.totalSecs=cfg.work*60;
+  updatePomoUI();
+}
+function skipPhase(){
+  pausePomo();
+  phaseEnd();
+}
+function phaseEnd(){
+  var cfg=getCfg();
+  clearInterval(pomoState._iv);
+  pomoState.running=false;
+  if(pomoState.phase==='work'){
+    pomoState.sessCount++;
+    pomoState.doneSessions++;
+    document.getElementById('pc-done').value=pomoState.doneSessions;
+    var isLong=pomoState.sessCount%cfg.sessions===0;
+    if(isLong){
+      pomoState.phase='long';
+      pomoState.remaining=cfg.long*60;
+      pomoState.totalSecs=cfg.long*60;
+      notify('🎉 Long Break! '+cfg.long+' minutes. Great work!');
+      toast('🎉 Long break! '+cfg.long+' min. You earned it!','g');
+    } else {
+      pomoState.phase='short';
+      pomoState.remaining=cfg.short*60;
+      pomoState.totalSecs=cfg.short*60;
+      notify('☕ Short Break! '+cfg.short+' minutes.');
+      toast('☕ Short break! '+cfg.short+' min.','b');
+    }
+  } else {
+    pomoState.phase='work';
+    pomoState.remaining=cfg.work*60;
+    pomoState.totalSecs=cfg.work*60;
+    notify('🍅 Back to work! '+cfg.work+' minutes.');
+    toast('🍅 Work time! '+cfg.work+' min.','r');
+  }
+  updatePomoUI();
+  // auto-start next phase
+  startPomo();
+}
+function notify(msg){
+  if('Notification' in window && Notification.permission==='granted'){
+    new Notification('StudyDesk',{body:msg,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><text y="28" font-size="28">🍅</text></svg>'});
+  }
+}
+// request notification permission on load
+if('Notification' in window && Notification.permission==='default'){
+  Notification.requestPermission();
+}
+
+// ══════════════════════════════════════════════
 //  IMPORT / EXPORT
 // ══════════════════════════════════════════════
-var SCHEMA={
-  _v:'sdf2',
-  sessions:[{
-    id:'sess_abc',
-    name:'Session Name',
-    subjects:[{
-      id:'subj_xyz',
-      icon:'📚',
-      name:'Subject Name',
-      note:'Optional notes',
-      open:true,
-      tasks:[{
-        id:'task_123',
-        text:'Task description',
-        done:false,
-        diff:'normal'
-      }]
-    }]
-  }],
-  active:'sess_abc'
-};
-
+var SCHEMA={_v:'sdf2',sessions:[{id:'sess_abc',name:'Session Name',subjects:[{id:'subj_xyz',icon:'📚',name:'Subject Name',note:'Optional notes',open:true,tasks:[{id:'task_123',text:'Task description',done:false,diff:'normal'}]}]}],active:'sess_abc',qnotes:[{id:'qn_1',text:'https://example.com'}]};
 function ioTab(t){
   ['save','load','fmt'].forEach(function(k){
     document.getElementById('io-'+k).style.display=k===t?'block':'none';
@@ -630,12 +917,7 @@ function ioTab(t){
     var colors=['#1fd4a0','#4f8ef7','#f9c22e','#f75f8e'];
     document.getElementById('dl-grid').innerHTML=DK.map(function(k,i){
       var d=D[k];
-      return '<div class="dlrow">'
-        +'<span>'+d.ic+'</span>'
-        +'<div><div style="font-weight:600;font-size:.82rem">'+d.n+'</div>'
-        +'<div style="font-size:.7rem;color:var(--sub)">"diff":"'+k+'"</div></div>'
-        +'<span class="dlpts" style="color:'+colors[i]+'">'+d.pts+'pt</span>'
-        +'</div>';
+      return '<div class="dlrow"><span>'+d.ic+'</span><div><div style="font-weight:600;font-size:.82rem">'+d.n+'</div><div style="font-size:.7rem;color:var(--sub)">"diff":"'+k+'"</div></div><span class="dlpts" style="color:'+colors[i]+'">'+d.pts+'pt</span></div>';
     }).join('');
   }
 }
@@ -644,9 +926,9 @@ function genExport(){
   var out;
   if(scope==='cur'){
     var sess=activeSess();
-    out={_v:'sdf2',sessions:sess?[sess]:[],active:sess?sess.id:''};
+    out={_v:'sdf2',sessions:sess?[sess]:[],active:sess?sess.id:'',qnotes:db.qnotes||[]};
   } else {
-    out={_v:'sdf2',sessions:db.sessions,active:db.active};
+    out={_v:'sdf2',sessions:db.sessions,active:db.active,qnotes:db.qnotes||[]};
   }
   document.getElementById('exp-out').value=JSON.stringify(out,null,2);
   return out;
@@ -654,18 +936,12 @@ function genExport(){
 function copyJSON(){
   genExport();
   var txt=document.getElementById('exp-out').value;
-  if(navigator.clipboard){
-    navigator.clipboard.writeText(txt).then(function(){ toast('📋 Copied!','b'); }).catch(function(){ toast('Could not copy','r'); });
-  } else {
-    document.getElementById('exp-out').select();
-    document.execCommand('copy');
-    toast('📋 Copied!','b');
-  }
+  if(navigator.clipboard){ navigator.clipboard.writeText(txt).then(function(){ toast('📋 Copied!','b'); }).catch(function(){ toast('Could not copy','r'); }); }
+  else { document.getElementById('exp-out').select(); document.execCommand('copy'); toast('📋 Copied!','b'); }
 }
 function dlJSON(){
   genExport();
-  var txt=document.getElementById('exp-out').value;
-  if(!txt) return;
+  var txt=document.getElementById('exp-out').value; if(!txt) return;
   var scope=document.getElementById('exp-scope').value;
   var sess=activeSess();
   var name=(scope==='cur'&&sess?sess.name:'all-sessions').replace(/\s+/g,'-').toLowerCase();
@@ -689,7 +965,6 @@ function doImport(){
   var parsed;
   try{ parsed=JSON.parse(raw); } catch(e){ toast('Invalid JSON — check Format tab','r'); return; }
   if(!parsed.sessions||!Array.isArray(parsed.sessions)){ toast('Missing "sessions" array','r'); return; }
-  // migrate old diff
   parsed.sessions.forEach(function(sess){
     (sess.subjects||[]).forEach(function(subj){
       (subj.tasks||[]).forEach(function(t){
@@ -697,13 +972,13 @@ function doImport(){
       });
     });
   });
-  // merge
   parsed.sessions.forEach(function(ns){
     var idx=db.sessions.findIndex(function(s){ return s.id===ns.id; });
     if(idx>-1) db.sessions[idx]=ns;
     else db.sessions.push(ns);
   });
   if(parsed.active) db.active=parsed.active;
+  if(parsed.qnotes) db.qnotes=parsed.qnotes;
   save(); render(); cm('m-io');
   toast('✅ Loaded '+parsed.sessions.length+' session(s)!','g');
 }
@@ -716,7 +991,6 @@ function om(id){
   setTimeout(function(){ var f=document.querySelector('#'+id+' input'); if(f) f.focus(); },80);
 }
 function cm(id){ document.getElementById(id).classList.add('hid'); }
-
 document.querySelectorAll('.ov').forEach(function(o){
   o.addEventListener('click',function(e){ if(e.target===o) o.classList.add('hid'); });
 });
@@ -746,10 +1020,15 @@ function render(){
   renderSessions();
   updateStats();
   renderSubjects();
+  renderQNotes();
 }
 
 load();
 render();
+
+// init qnotes panel state
+document.getElementById('qnotes-body').style.display='block';
+document.getElementById('qn-inp').addEventListener('keydown',function(e){ if(e.key==='Enter') addQNote(); });
 </script>
 </body>
 </html>
